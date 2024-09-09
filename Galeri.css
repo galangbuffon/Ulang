@@ -101,10 +101,17 @@ body {
     color: #666;
 }
 
+.galeri-container {
+    display: grid; /* Tambahkan ini */
+    grid-gap: 10px; /* Menambahkan jarak antar item */
+}
+
 /* Media query untuk perangkat mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
     .galeri-container {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Mengatur 2 kolom pada mobile */
+        grid-gap: 10px; /* Menambahkan jarak antar item */
     }
     .modal-content {
         inline-size: 100%;
@@ -120,3 +127,4 @@ body {
         font-size: 1em;
     }
 }
+
