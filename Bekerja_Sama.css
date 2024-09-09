@@ -1,0 +1,91 @@
+.partnership-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.partnership-section h2 {
+    text-align: center;
+    margin-block-end: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.partner-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    block-size: 150px; /* Tetapkan tinggi tetap */
+}
+
+.partner-item:hover {
+    transform: scale(1.05);
+}
+
+.partner-item img {
+    inline-size: 100px; /* Tetapkan lebar tetap */
+    block-size: 100px; /* Tetapkan tinggi tetap */
+    object-fit: contain; /* Pastikan gambar tidak terdistorsi */
+    margin-block-end: 10px;
+}
+
+.partner-item p {
+    font-size: 0.8em;
+    color: #666;
+    margin: 0;
+    max-inline-size: 100%; /* Batasi lebar teks */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Tambahkan elipsis jika teks terlalu panjang */
+    white-space: nowrap; /* Mencegah teks wrap */
+}
+
+/* Media query untuk tablet */
+@media screen and (max-width: 1024px) {
+    .partner-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+    }
+
+    .partner-item {
+        block-size: 120px; /* Kurangi tinggi untuk tablet */
+    }
+
+    .partner-item img {
+        inline-size: 80px; /* Kurangi ukuran gambar untuk tablet */
+        block-size: 80px;
+    }
+
+    .partner-item p {
+        font-size: 0.7em;
+    }
+}
+
+/* Media query untuk smartphone */
+@media screen and (max-width: 768px) {
+    .partner-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .partner-item {
+        block-size: 100px; /* Kurangi tinggi untuk smartphone */
+    }
+
+    .partner-item img {
+        inline-size: 60px; /* Kurangi ukuran gambar untuk smartphone */
+        block-size: 60px;
+    }
+
+    .partner-item p {
+        font-size: 0.6em;
+    }
+}
